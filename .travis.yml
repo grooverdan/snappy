@@ -27,6 +27,19 @@ matrix:
     os: osx
   - env: BUILD_TYPE=RelWithDebInfo CPU_LEVEL=AVX2
     os: osx
+  include:
+  - env: BUILD_TYPE=Debug
+    arch: ppc64le
+    compiler: gcc
+  - env: BUILD_TYPE=RelWithDebInfo
+    arch: ppc64le
+    compiler: gcc
+  - env: BUILD_TYPE=Debug
+    arch: ppc64le
+    compiler: clang
+  - env: BUILD_TYPE=RelWithDebInfo
+    arch: ppc64le
+    compiler: clang
 
 addons:
   apt:
